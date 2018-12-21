@@ -94,7 +94,11 @@ function bes.echo.rs ()
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function bes.echo.error ()
 {
+    local leave=${2:-0}
     echo -e "\n${Cerr}    error : ${Coff}\n\t$1 ${Coff}\n"
+    if [ "$leave" = "1" ]; then
+        exit 1;
+    fi
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function bes.echo.sepline ()
