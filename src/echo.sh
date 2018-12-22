@@ -95,4 +95,7 @@ function echo.app ()
     echo.sepline
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-bes.echo.boot
+declare -f bes.reg > /dev/null
+if [ $? -eq 0 ]; then
+    bes.reg bes.echo
+fi
