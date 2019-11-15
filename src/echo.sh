@@ -83,7 +83,7 @@ function echo.app ()
     local     msg=${1:-''}
     local version=${2:-''}
     local  author=${3:-'a-Sansara'}
-    local license=${3:-'GNU GPL v3'}
+    local license=${4:-'GNU GPL v3'}
     if [ ! -z "$2" ]; then
         msg="$msg ${Cval}v$version"
     fi
